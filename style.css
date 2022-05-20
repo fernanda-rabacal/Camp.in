@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+
+:root {
+
+  --text-base: hsl(218, 13%, 72%);
+  --text-title: hsl(44, 26%, 77%);
+  --background: hsl(40, 6%, 9%);
+  --form-background: hsl(36, 7%, 13%);
+  --primary-color: hsl(43, 100%, 60%);
+  --button-text: hsl(43, 90%, 15%);
+
+  font-size: 62.5%;
+}
+
+img {
+  visibility: hidden;
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: var(--background);
+  margin-top: 4rem;
+}
+
+header {
+  margin-left: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.login-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  
+  margin-top: 3rem;
+  height: 2.4rem;
+}
+
+header h2 {
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 2.4rem;
+  color: var(--text-title);
+}
+
+header p{
+  color: var(--text-base);
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+form {
+  margin-left: 4rem;
+}
+
+.login input {
+  box-sizing: border-box;
+  border: 1px solid #868686;
+  border-radius: 4px;
+
+  color: hsla(218, 10%, 69%, 1);
+  background-color: var(--background);
+
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+
+  width: 33.5rem;
+  height: 4.4rem;
+  margin-top: .5rem;
+  padding-left: 1rem;
+}
+
+.login .email {
+  background-image: url(./email.svg);
+  background-repeat: no-repeat;
+  background-position: bottom 1.2rem left .5rem;
+  padding-left: 3rem;
+
+}
+.login .email:focus {
+  background-image: url(./email-focus.svg);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-position: bottom 1.2rem left .5rem;
+  padding-left: 3rem;
+}
+
+.login .password {
+  background-image: url(./password.svg);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-position: bottom 1.2rem left .5rem;
+  padding-left: 3rem;
+
+}
+.login .password:focus {
+  background-image: url(./password-focus.svg);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-position: bottom 1.2rem left .5rem;
+  padding-left: 3rem;
+}
+
+.login .eye {
+  position: relative;
+  z-index: 1;
+  right: 3.5rem;
+  top: .4rem;
+  cursor: pointer;
+}
+
+.login .eye svg:hover path {
+  stroke: var(--primary-color)
+} 
+
+.login input:focus{
+  box-sizing: border-box;
+
+  outline: 0;
+  border: 1px solid var(--primary-color);
+  box-shadow: 0px 0px 0px 2px #FFDE88;
+}
+
+form h4 {
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+
+  color: var(--text-base);
+  margin-bottom: 0;
+  margin-top: 2rem;
+}
+
+.options {
+  display: flex;
+  font-size: 1.6rem;
+  align-items: center;
+  width: 33.5rem;
+  justify-content: space-between;
+}
+
+.options h5 {
+  color: var(--text-base);
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+
+  margin-block: 2rem;
+  padding-inline: 30px;
+}
+
+.options p {
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  color: var(--primary-color);
+
+  cursor: pointer;
+}
+
+.container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.container input{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  height: 2rem;
+  width: 2rem;
+  background-color: var(--background);
+  border: 1px solid #868686;
+  border-radius: 4px;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.container .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: .6rem;
+  top: .2rem;
+  width: .5rem;
+  height: 1rem;
+  border: solid var(--background);
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.options label {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem 2.4rem;
+  margin-top: 0;
+
+  width: 33.4rem;
+  height: 5.1rem;
+
+  border: none;
+  background: var(--primary-color);
+  border-radius: .4rem;
+
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  color: var(--button-text);
+}
+
+.register {
+  text-align: center;
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  color: var(--primary-color);
+
+  cursor: pointer;
+
+  margin-left: 4rem;
+}
+
+/* --------RESPONSIVO --------------------------*/  
+@media (min-width: 1024px) {
+
+  /*----------------- GERAL ------------- */
+
+  body {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 'A B';
+
+    margin: 0;
+    padding: 0;
+
+  }
+
+  header {
+    margin-top: 0;
+    align-self: flex-start;
+    margin-left: 9.4rem;
+  }
+
+  body > svg {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+  }
+
+  .form {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+  }
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    grid-area: A;
+
+    width: 47.2rem;
+    height: 46.2rem;
+
+    background-color: var(--form-background);
+    border-radius: .8rem;
+  }
+
+  img {
+    width:100%;
+    height:100vh;
+    visibility: visible;
+    position: relative;
+
+    object-position: 1rem;
+
+    grid-area: B
+  }
+
+  /*-------------- TAMANHO DO FORM------------ */
+
+  header h2 {
+    font-size: 1.8rem;
+  }
+  
+  header p {
+    font-size: 1.4rem;
+  }
+
+  form h4 {
+    font-size: 1.4rem;
+  }
+
+  .login input, button, .options {
+    width: 30rem;
+  }
+
+  .register {
+    margin-left: 0;
+  }
+  
+}
