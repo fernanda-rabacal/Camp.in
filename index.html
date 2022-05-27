@@ -34,16 +34,18 @@
         <p>Entre com suas informações de cadastro.</p> 
     </header>
     
-    <form>
+    <form role='formulario de login'>
       <section class="login">
-        <h4>Email</h4>
-        <input type="email" 
-        class="email"placeholder="Digite seu e-mail">
+        
+          <h4>Email</h4>
+          <input type="email" 
+          class="email"placeholder="Digite seu e-mail">
       <br>
+     
         <h4>Senha</h4>
         <input type="password" 
         class="password" placeholder="Digite sua senha">
-        <span class="eye">
+        <span role="see password" class="eye">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_216_38)">
             <path d="M0.833313 10C0.833313 10 4.16665 3.33334 9.99998 3.33334C15.8333 3.33334 19.1666 10 19.1666 10C19.1666 10 15.8333 16.6667 9.99998 16.6667C4.16665 16.6667 0.833313 10 0.833313 10Z" stroke="#AFB6C2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -56,26 +58,24 @@
             </defs>
             </svg>
         </span>
+    
       </section>
       <section class="options">
-        <label class="container">
+        <label for="Lembre-me" class="container">
           <input type="checkbox">
           <span class="checkmark"></span>
           <h5>Lembre-me</h5>
         </label>
-        <p>Esqueci minha senha</p>
+        <p aria-label='Botão para recuperar a senha' >Esqueci minha senha</p>
       </section>
       <button>
         Entrar
       </button>
     </form>
-    <p class="register">Não tem uma conta? <strong>Registre-se</strong></p>
-    
+    <p aria-label='Botão para se registrar' class="register">Não tem uma conta? <strong>Registre-se</strong></p>
     </div>  
     </div>
-  
-  
-    <img src="./images/images/side-image-2x.jpg" alt="">
+    <img src="./images/images/side-image-2x.jpg" alt="Um carro com uma barraca de acampamento acima dele, estacionado na beira de um lago com árvores em volta">
   </div>
 </body>
 

@@ -63,9 +63,6 @@ header p{
   margin-top: 1rem;
 }
 
-form {
-  margin-left: 4rem;
-}
 
 .login input {
   box-sizing: border-box;
@@ -120,9 +117,10 @@ form {
 .login .eye {
   position: relative;
   z-index: 1;
-  right: 3.5rem;
-  top: .4rem;
+  left: 27rem;
+  bottom: 3.3rem;
   cursor: pointer;
+  display: flex;
 }
 
 .login .eye svg:hover path {
@@ -288,7 +286,7 @@ button {
   header {
     margin-top: 0;
     align-self: flex-start;
-    margin-left: 9.4rem;
+    margin-left: 0
   }
 
   body > svg {
@@ -304,6 +302,9 @@ button {
   }
 
   .section {
+    box-sizing: border-box;
+    padding-inline: 5rem;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -311,7 +312,6 @@ button {
 
     grid-area: A;
 
-    width: 47.2rem;
     height: 46.2rem;
 
     background-color: var(--form-background);
@@ -321,10 +321,10 @@ button {
   img {
     width:100%;
     height:100vh;
+    min-height: 470px;
+    overflow: auto;
     visibility: visible;
     position: relative;
-
-    object-position: 1rem;
 
     grid-area: B
   }
@@ -349,6 +349,7 @@ button {
 
   .register {
     margin-left: 0;
+    margin-bottom: 2rem;
   }
   
 }
