@@ -16,6 +16,9 @@ img {
   display: none;
 }
 
+body > svg {
+  align-self: flex-start;
+}
 
 body {
   display: flex;
@@ -285,16 +288,17 @@ button {
     margin-left: 0
   }
 
-  body > svg {
+  .form > svg {
     position: absolute;
-    top: 2rem;
-    left: 2rem;
+    top: 3rem;
+    left: 3rem
   }
 
   .form {
     display: flex;
     align-items: center;
     justify-content:center;
+    flex-direction: column;
   }
 
   .section {
