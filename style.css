@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
 
 :root {
-
   --text-base: hsl(218, 13%, 72%);
   --text-title: hsl(44, 26%, 77%);
   --background: hsl(40, 6%, 9%);
@@ -14,11 +13,9 @@
 }
 
 img {
-  visibility: hidden;
-  position: absolute;
-  width: 2rem;
-  height: 2rem;
+  display: none;
 }
+
 
 body {
   display: flex;
@@ -30,7 +27,6 @@ body {
 }
 
 header {
-  margin-left: 4rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -77,21 +73,21 @@ header p{
   font-size: 1.4rem;
   line-height: 1.6rem;
 
-  width: 33.5rem;
+  width: 30rem;
   height: 4.4rem;
   margin-top: .5rem;
   padding-left: 1rem;
 }
 
 .login .email {
-  background-image: url(./email.svg);
+  background-image: url(./images/email.svg);
   background-repeat: no-repeat;
   background-position: bottom 1.2rem left .5rem;
   padding-left: 3rem;
 
 }
 .login .email:focus {
-  background-image: url(./email-focus.svg);
+  background-image: url(./images/email-focus.svg);
   background-repeat: no-repeat;
   background-position: left;
   background-position: bottom 1.2rem left .5rem;
@@ -99,7 +95,7 @@ header p{
 }
 
 .login .password {
-  background-image: url(./password.svg);
+  background-image: url(./images/password.svg);
   background-repeat: no-repeat;
   background-position: left;
   background-position: bottom 1.2rem left .5rem;
@@ -107,7 +103,7 @@ header p{
 
 }
 .login .password:focus {
-  background-image: url(./password-focus.svg);
+  background-image: url(./images/password-focus.svg);
   background-repeat: no-repeat;
   background-position: left;
   background-position: bottom 1.2rem left .5rem;
@@ -121,6 +117,7 @@ header p{
   bottom: 3.3rem;
   cursor: pointer;
   display: flex;
+  width: fit-content;
 }
 
 .login .eye svg:hover path {
@@ -150,7 +147,7 @@ form h4 {
   display: flex;
   font-size: 1.6rem;
   align-items: center;
-  width: 33.5rem;
+  width: 30rem;
   justify-content: space-between;
 }
 
@@ -236,7 +233,7 @@ button {
   padding: 1.2rem 2.4rem;
   margin-top: 0;
 
-  width: 33.4rem;
+  width: 30rem;
   height: 5.1rem;
 
   border: none;
@@ -265,7 +262,6 @@ button {
 
   cursor: pointer;
 
-  margin-left: 4rem;
 }
 
 /* --------RESPONSIVO --------------------------*/  
@@ -323,7 +319,7 @@ button {
     height:100vh;
     min-height: 470px;
     overflow: auto;
-    visibility: visible;
+    display: initial;
     position: relative;
 
     grid-area: B
